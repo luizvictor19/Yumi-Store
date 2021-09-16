@@ -11,10 +11,11 @@ export const GlobalStyle = createGlobalStyle`
     --black: #0A0A09;
     --orange: #FF9B2D;
     --yellow: #FFCE3B;
-    --white: #E5E5E5;
+    --white: #fff;
     --red: #D5222B;
     --dark-salmon: #F25553;
     --salmon: #FF9790;
+    --gray: #7C7575
   }
   
   * {
@@ -28,9 +29,10 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--black);
     font-size: 1rem;
     font-family: 'Mulish', sans-serif;
+    overflow-x: hidden;
   }
   h1 {
-    font-family: 'Merienda', cursive;
+    font-family: 'Suez One', serif;
   }
 
   h2, h3 {
@@ -43,5 +45,36 @@ export const GlobalStyle = createGlobalStyle`
   select {
     outline: none;
   }
+
+  button {
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb{
+  background: var(--purple);
+  border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover{
+  background: var(--dark-purple);
+
+  }
+
+  ::-webkit-scrollbar-track{
+  background: #E3E3E3;
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+  }
   
+  button {
+    &:hover {
+      filter: brightness(.85);
+      transition: all .2s;
+    }
+  }
 `;
